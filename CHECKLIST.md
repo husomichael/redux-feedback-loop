@@ -4,15 +4,14 @@
 
 [x]setup database
 
-[]initialize components
-    []header
-    []feeling
-    []comments
-    []thankYou
-    []supported
-    []understanding
-    []review
-    []admin
+[x]initialize components
+    [x]header
+    [x]feeling
+    [x]comments
+    [x]supported
+    [x]understandixng
+    [x]review
+    [x]admin
 
 []setup redux store
     []Provider
