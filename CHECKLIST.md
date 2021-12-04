@@ -14,12 +14,12 @@
     [x]admin
 
 []setup redux store
-    []Provider
-    []Create redux store
-    []applyMiddleware
-    []Logger
+    [x]Provider
+    [x]Create redux store
+    [x]applyMiddleware
+    [x]Logger
     []feedbackReducer
-        []Object with 4 properties. {feeling: , understanding: , support: , comment: }
+        [x]Object with 4 properties. {feeling: , understanding: , support: , comment: }
         []Setup 5 cases for reducer to listen for.
             []4 cases for setting properties.
             []5th case to reset data. (call on post route.then).
