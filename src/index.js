@@ -7,7 +7,14 @@ import logger from 'redux-logger';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 
-
+const storeInstance = createStore(
+    combineReducers({
+        //Reducers go here.
+    }),
+    applyMiddleware(
+        logger
+    )
+);
 
 ReactDOM.render(
     <Provider store={storeInstance}>
