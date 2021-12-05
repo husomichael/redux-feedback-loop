@@ -61,8 +61,8 @@
     [x]feeling
     []comments
     []thankYou
-    []supported
-    []understanding
+    [x]supported
+    [x]understanding
     []review
     []admin
 
