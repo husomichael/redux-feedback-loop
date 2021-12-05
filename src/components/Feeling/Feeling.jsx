@@ -18,7 +18,7 @@ function Feeling(){
     };
 
     const addFeeling = () => {
-        if(feeling != ''){
+        if(feeling != '' && feeling > 0 && feeling < 6){
             console.log('Feeling being added to store:', feeling)
             dispatch({
                 type: 'ADD_FEELING',
@@ -26,6 +26,8 @@ function Feeling(){
             });
             setFeeling('');
             goToUnderstanding();
+        }else{
+            alert('Insert a value of 1 - 5');
         };
     };
 

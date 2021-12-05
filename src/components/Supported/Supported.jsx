@@ -18,7 +18,7 @@ function Supported(){
     };
 
     const addSupported = () => {
-        if(supported != ''){
+        if(supported != '' && supported > 0 && supported < 6){
             console.log('Supported being added to store:', supported);
             dispatch({
                 type: 'ADD_SUPPORT',
@@ -26,6 +26,8 @@ function Supported(){
             });
             setSupported('');
             goToComments();
+        }else{
+            alert('Insert a value of 1 - 5');
         };
     };
 

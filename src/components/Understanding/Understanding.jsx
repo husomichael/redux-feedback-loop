@@ -18,7 +18,7 @@ function Understanding(){
     };
 
     const addUnderstanding = () => {
-        if(understanding != ''){
+        if(understanding != '' && understanding > 0 && understanding < 6){
             console.log('Understanding being added to store:', understanding)
             dispatch({
                 type: 'ADD_UNDERSTANDING',
@@ -26,6 +26,8 @@ function Understanding(){
             });
             setUnderstanding('');
             goToSupported();
+        }else{
+            alert('Insert a value of 1 - 5');
         };
     };
 

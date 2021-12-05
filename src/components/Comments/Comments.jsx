@@ -18,7 +18,6 @@ function Comments(){
     };
 
     const addComments = () => {
-        if(comments != ''){
             console.log('Comments being added to store:', comments);
             dispatch({
                 type: 'ADD_COMMENT',
@@ -26,7 +25,6 @@ function Comments(){
             });
             setComments('');
             goToReview();
-        };
     };
 
     return(
