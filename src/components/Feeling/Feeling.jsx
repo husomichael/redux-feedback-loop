@@ -7,6 +7,11 @@ function Feeling(){
     const history = useHistory();
     const [feeling, setFeeling] = useState('');
 
+    const goToUnderstanding = () => {
+        console.log('Going to /understanding');
+        history.push('/understanding');
+    };
+
     const handleFeelingInput = (event) => {
         setFeeling(event.target.value)
         console.log('in handleFeelingInput, feeling:', feeling);
@@ -19,6 +24,7 @@ function Feeling(){
             payload: feeling
         });
         setFeeling('');
+        goToUnderstanding();
     };
 
     return(

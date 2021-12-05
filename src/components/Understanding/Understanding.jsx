@@ -7,6 +7,11 @@ function Understanding(){
     const history = useHistory();
     const [understanding, setUnderstanding] = useState('');
 
+    const goToSupported = () => {
+        console.log('Going to /supported');
+        history.push('/supported');
+    };
+
     const handleUnderstandingInput = (event) => {
         setUnderstanding(event.target.value)
         console.log('in handleUnderstandingInput, understanding:', understanding);
@@ -19,6 +24,7 @@ function Understanding(){
             payload: understanding
         });
         setUnderstanding('');
+        goToSupported();
     };
 
     return(

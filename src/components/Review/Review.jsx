@@ -9,6 +9,11 @@ function Review(){
     const feedback = useSelector((store) => store.feedbackReducer);
     const history = useHistory();
 
+    const goToHome = () => {
+        console.log('Going to /');
+        history.push('/');
+    };
+
     function handleSubmit(){
         console.log('inside handleSubmit');
         axios({
@@ -20,6 +25,7 @@ function Review(){
             dispatch({
                 type: "CLEAR_FEEDBACK"
             });
+            goToHome();
         }).catch((error) => {
             console.log('Submit post error', error);
         })

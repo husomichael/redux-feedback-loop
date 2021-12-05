@@ -7,6 +7,11 @@ function Supported(){
     const history = useHistory();
     const [supported, setSupported] = useState('');
 
+    const goToComments = () => {
+        console.log('Going to /comments');
+        history.push('/comments');
+    };
+
     const handleSupportedInput = (event) => {
         setSupported(event.target.value)
         console.log('in handleSupportedInput, supported:', supported);
@@ -19,6 +24,7 @@ function Supported(){
             payload: supported
         });
         setSupported('');
+        goToComments();
     };
 
     return(

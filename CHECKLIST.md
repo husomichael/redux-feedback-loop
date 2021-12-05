@@ -26,8 +26,8 @@
     [x]Redux dispatches tied to "Next" buttons on each page.
 
 []Setup router
-    []Router in app.js
-    []Routes match pages. (/feeling, /understanding, etc.).
+    [x]Router in app.js
+    [x]Routes match pages. (/feeling, /understanding, etc.).
         Example:
 
         <Route exact path = "/">

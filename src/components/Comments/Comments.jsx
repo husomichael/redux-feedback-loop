@@ -7,6 +7,11 @@ function Comments(){
     const history = useHistory();
     const [comments, setComments] = useState('');
 
+    const goToReview = () => {
+        console.log('Going to /review');
+        history.push('/review');
+    };
+
     const handleCommentsInput = (event) => {
         setComments(event.target.value)
         console.log('in handleCommentsInput, comments:', comments);
@@ -19,6 +24,7 @@ function Comments(){
             payload: comments
         });
         setComments('');
+        goToReview();
     };
 
     return(
