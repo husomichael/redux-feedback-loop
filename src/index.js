@@ -7,59 +7,42 @@ import logger from 'redux-logger';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 
-const feelingReducer = (state = {}, action) => {
-    switch(action.type) {
-        case "ADD_FEELING":
-            return state.feeling = action.payload;
-        case "CLEAR_FEEDBACK":
-            return {};
-        default:
-            return {};
-    };
-};
-
-//Reference this for the all in 1 reducer.
-const understandingReducer = (state = {}, action) => {
-    switch(action.type) {
-        case "ADD_UNDERSTANDING":
-            return {understanding: action.payload}; // Payload can return entire object with current states.
-        case "CLEAR_FEEDBACK":
-            return {};
-        default:
-            return {};
-    };
-};
-
-const supportReducer = (state = {}, action) => {
-    switch(action.type) {
-        case "ADD_SUPPORT":
-            return state.support = action.payload;
-        case "CLEAR_FEEDBACK":
-            return {};
-        default:
-            return {};
-    };
-};
-
-const commentReducer = (state = {}, action) => {
-    switch(action.type) {
-        case "ADD_COMMENT":
-            return state.comment = action.payload;
-        case "CLEAR_FEEDBACK":
-            return {};
-        default:
-            return {};
-    };
-};
-
-// const feedbackReducer = (state = {}, action) => {
+// const feelingReducer = (state = {}, action) => {
 //     switch(action.type) {
 //         case "ADD_FEELING":
 //             return state.feeling = action.payload;
+//         case "CLEAR_FEEDBACK":
+//             return {};
+//         default:
+//             return {};
+//     };
+// };
+
+// //Reference this for the all in 1 reducer.
+// const understandingReducer = (state = {}, action) => {
+//     switch(action.type) {
 //         case "ADD_UNDERSTANDING":
-//             return state.understanding = action.payload;
+//             return {understanding: action.payload}; // Payload can return entire object with current states.
+//         case "CLEAR_FEEDBACK":
+//             return {};
+//         default:
+//             return {};
+//     };
+// };
+
+// const supportReducer = (state = {}, action) => {
+//     switch(action.type) {
 //         case "ADD_SUPPORT":
 //             return state.support = action.payload;
+//         case "CLEAR_FEEDBACK":
+//             return {};
+//         default:
+//             return {};
+//     };
+// };
+
+// const commentReducer = (state = {}, action) => {
+//     switch(action.type) {
 //         case "ADD_COMMENT":
 //             return state.comment = action.payload;
 //         case "CLEAR_FEEDBACK":
@@ -69,12 +52,38 @@ const commentReducer = (state = {}, action) => {
 //     };
 // };
 
+const feedbackReducer = (state = {feeling: '', understanding: '', support: '', comment: ''}, action) => {
+    switch(action.type) {
+        case "ADD_FEELING":
+            return {feeling: action.payload,
+                    understanding: state.understanding,
+                    support: state.support,
+                    comment: state.comment}
+        case "ADD_UNDERSTANDING":
+            return {feeling: state.feeling,
+                    understanding: action.payload,
+                    support: state.support,
+                    comment: state.comment}
+        case "ADD_SUPPORT":
+            return {feeling: state.feeling,
+                    understanding: state.understanding,
+                    support: action.payload,
+                    comment: state.comment}
+        case "ADD_COMMENT":
+            return {feeling: state.feeling,
+                    understanding: state.understanding,
+                    support: state.support,
+                    comment: action.payload}
+        case "CLEAR_FEEDBACK":
+            return {feeling: '', understanding: '', support: '', comment: ''};
+        default:
+            return {feeling: '', understanding: '', support: '', comment: ''};
+    };
+};
+
 const storeInstance = createStore(
     combineReducers({
-        feelingReducer,
-        understandingReducer,
-        supportReducer,
-        commentReducer
+        feedbackReducer
     }),
     applyMiddleware(
         logger

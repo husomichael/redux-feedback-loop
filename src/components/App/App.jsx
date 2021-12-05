@@ -6,6 +6,7 @@ import Feeling from '../Feeling/Feeling.jsx';
 import Understanding from '../Understanding/Understanding.jsx';
 import Supported from '../Supported/Supported.jsx';
 import Comments from '../Comments/Comments.jsx';
+import Review from '../Review/Review.jsx';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Understanding />
       <Supported />
       <Comments />
+      <Review />
     </div>
   );
 };
