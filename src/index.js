@@ -7,6 +7,8 @@ import logger from 'redux-logger';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 
+//Reducer to store all 4 parts of the feedback in 1 object.
+//4 cases for adding feedback to the object, 1 case for clearing it on send.
 const feedbackReducer = (state = {feeling: '', understanding: '', support: '', comment: ''}, action) => {
     switch(action.type) {
         case "ADD_FEELING":
