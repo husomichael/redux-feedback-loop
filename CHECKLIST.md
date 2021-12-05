@@ -57,7 +57,7 @@
         };    
 
 []setup components
-    []header
+    [x]header
     []feeling
     []comments
     []thankYou
