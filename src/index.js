@@ -18,10 +18,11 @@ const feelingReducer = (state = {}, action) => {
     };
 };
 
+//Reference this for the all in 1 reducer.
 const understandingReducer = (state = {}, action) => {
     switch(action.type) {
         case "ADD_UNDERSTANDING":
-            return state.understanding = action.payload;
+            return {understanding: action.payload}; // Payload can return entire object with current states.
         case "CLEAR_FEEDBACK":
             return {};
         default:
