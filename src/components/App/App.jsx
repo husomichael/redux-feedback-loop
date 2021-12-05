@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import Header from '../Header/Header.jsx';
 import Feeling from '../Feeling/Feeling.jsx';
+import Understanding from '../Understanding/Understanding.jsx';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <div className='App'>
       <Header />
       <Feeling />
+      <Understanding />
     </div>
   );
 };
