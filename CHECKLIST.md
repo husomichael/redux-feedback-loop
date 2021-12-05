@@ -59,7 +59,7 @@
 []setup components
     [x]header
     [x]feeling
-    []comments
+    [x]comments
     []thankYou
     [x]supported
     [x]understanding
