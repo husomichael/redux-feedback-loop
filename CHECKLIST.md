@@ -13,7 +13,7 @@
     [x]review
     [x]admin
 
-[]setup redux store
+[x]setup redux store
     [x]Provider
     [x]Create redux store
     [x]applyMiddleware
@@ -23,7 +23,7 @@
         [x]Setup 5 cases for reducer to listen for.
             [x]4 cases for setting properties.
             [x]5th case to reset data. (call on post route.then).
-    []Redux dispatches tied to "Next" buttons on each page.
+    [x]Redux dispatches tied to "Next" buttons on each page.
 
 []Setup router
     []Router in app.js
@@ -63,7 +63,7 @@
     []thankYou
     [x]supported
     [x]understanding
-    []review
+    [x]review
     []admin
 
 []STRETCH:
