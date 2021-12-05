@@ -20,9 +20,9 @@
     [x]Logger
     []feedbackReducer
         [x]Object with 4 properties. {feeling: , understanding: , support: , comment: }
-        []Setup 5 cases for reducer to listen for.
-            []4 cases for setting properties.
-            []5th case to reset data. (call on post route.then).
+        [x]Setup 5 cases for reducer to listen for.
+            [x]4 cases for setting properties.
+            [x]5th case to reset data. (call on post route.then).
     []Redux dispatches tied to "Next" buttons on each page.
 
 []Setup router
