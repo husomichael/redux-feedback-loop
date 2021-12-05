@@ -18,13 +18,15 @@ function Supported(){
     };
 
     const addSupported = () => {
-        console.log('Supported being added to store:', supported);
-        dispatch({
-            type: 'ADD_SUPPORT',
-            payload: supported
-        });
-        setSupported('');
-        goToComments();
+        if(supported != ''){
+            console.log('Supported being added to store:', supported);
+            dispatch({
+                type: 'ADD_SUPPORT',
+                payload: supported
+            });
+            setSupported('');
+            goToComments();
+        };
     };
 
     return(

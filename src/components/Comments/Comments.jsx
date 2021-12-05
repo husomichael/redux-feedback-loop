@@ -18,13 +18,15 @@ function Comments(){
     };
 
     const addComments = () => {
-        console.log('Comments being added to store:', comments);
-        dispatch({
-            type: 'ADD_COMMENT',
-            payload: comments
-        });
-        setComments('');
-        goToReview();
+        if(comments != ''){
+            console.log('Comments being added to store:', comments);
+            dispatch({
+                type: 'ADD_COMMENT',
+                payload: comments
+            });
+            setComments('');
+            goToReview();
+        };
     };
 
     return(

@@ -18,13 +18,15 @@ function Understanding(){
     };
 
     const addUnderstanding = () => {
-        console.log('Understanding being added to store:', understanding)
-        dispatch({
-            type: 'ADD_UNDERSTANDING',
-            payload: understanding
-        });
-        setUnderstanding('');
-        goToSupported();
+        if(understanding != ''){
+            console.log('Understanding being added to store:', understanding)
+            dispatch({
+                type: 'ADD_UNDERSTANDING',
+                payload: understanding
+            });
+            setUnderstanding('');
+            goToSupported();
+        };
     };
 
     return(

@@ -18,13 +18,15 @@ function Feeling(){
     };
 
     const addFeeling = () => {
-        console.log('Feeling being added to store:', )
-        dispatch({
-            type: 'ADD_FEELING',
-            payload: feeling
-        });
-        setFeeling('');
-        goToUnderstanding();
+        if(feeling != ''){
+            console.log('Feeling being added to store:', feeling)
+            dispatch({
+                type: 'ADD_FEELING',
+                payload: feeling
+            });
+            setFeeling('');
+            goToUnderstanding();
+        };
     };
 
     return(
