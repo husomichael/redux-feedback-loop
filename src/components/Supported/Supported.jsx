@@ -7,18 +7,28 @@ function Supported(){
     const history = useHistory();
     const [supported, setSupported] = useState('');
 
+    const goToComments = () => {
+        console.log('Going to /comments');
+        history.push('/comments');
+    };
+
     const handleSupportedInput = (event) => {
         setSupported(event.target.value)
         console.log('in handleSupportedInput, supported:', supported);
     };
 
     const addSupported = () => {
-        console.log('Supported being added to store:', supported);
-        dispatch({
-            type: 'ADD_SUPPORT',
-            payload: supported
-        });
-        setSupported('');
+        if(supported != '' && supported > 0 && supported < 6){
+            console.log('Supported being added to store:', supported);
+            dispatch({
+                type: 'ADD_SUPPORT',
+                payload: supported
+            });
+            setSupported('');
+            goToComments();
+        }else{
+            alert('Insert a value of 1 - 5');
+        };
     };
 
     return(

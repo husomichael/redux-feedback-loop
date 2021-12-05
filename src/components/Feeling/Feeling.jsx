@@ -7,18 +7,28 @@ function Feeling(){
     const history = useHistory();
     const [feeling, setFeeling] = useState('');
 
+    const goToUnderstanding = () => {
+        console.log('Going to /understanding');
+        history.push('/understanding');
+    };
+
     const handleFeelingInput = (event) => {
         setFeeling(event.target.value)
         console.log('in handleFeelingInput, feeling:', feeling);
     };
 
     const addFeeling = () => {
-        console.log('Feeling being added to store:', )
-        dispatch({
-            type: 'ADD_FEELING',
-            payload: feeling
-        });
-        setFeeling('');
+        if(feeling != '' && feeling > 0 && feeling < 6){
+            console.log('Feeling being added to store:', feeling)
+            dispatch({
+                type: 'ADD_FEELING',
+                payload: feeling
+            });
+            setFeeling('');
+            goToUnderstanding();
+        }else{
+            alert('Insert a value of 1 - 5');
+        };
     };
 
     return(

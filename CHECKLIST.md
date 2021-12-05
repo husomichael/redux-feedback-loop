@@ -25,16 +25,16 @@
             [x]5th case to reset data. (call on post route.then).
     [x]Redux dispatches tied to "Next" buttons on each page.
 
-[]Setup router
-    []Router in app.js
-    []Routes match pages. (/feeling, /understanding, etc.).
+[x]Setup router
+    [x]Router in app.js
+    [x]Routes match pages. (/feeling, /understanding, etc.).
         Example:
 
         <Route exact path = "/">
             <Route to go to /feeling>
         </Route>
 
-    []Setup useHistory on each page, call at the end of redux dispatch.
+    [x]Setup useHistory on each page, call at the end of redux dispatch.
     
         Example: 
 
@@ -60,7 +60,6 @@
     [x]header
     [x]feeling
     [x]comments
-    []thankYou
     [x]supported
     [x]understanding
     [x]review
