@@ -8,9 +8,9 @@ function Review(){
     const feedback = useSelector((store) => store.feedbackReducer);
     const history = useHistory();
 
-    const goToHome = () => {
-        console.log('Going to /');
-        history.push('/');
+    const goToThankYou = () => {
+        console.log('Going to /thankyou');
+        history.push('/thankyou');
     };
 
     function handleSubmit(){
@@ -24,7 +24,7 @@ function Review(){
             dispatch({
                 type: "CLEAR_FEEDBACK"
             });
-            goToHome();
+            goToThankYou();
         }).catch((error) => {
             console.log('Submit post error', error);
         })

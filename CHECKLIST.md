@@ -64,9 +64,3 @@
     [x]understanding
     [x]review
     []admin
-
-[]STRETCH:
-    []Mess with Material UI styling.
-    []Admin page
-    []Deploy to Heroku.
-
